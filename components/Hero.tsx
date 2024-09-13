@@ -27,7 +27,7 @@ const links = [
     icon: (
       <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#projects",
   },
   
   {
@@ -35,21 +35,21 @@ const links = [
     icon: (
       <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "https://github.com/kavan7",
   },
   {
     title: "LinkedIn",
     icon: (
       <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "https://www.linkedin.com/in/kavanabeyratne/",
   },
   {
     title: "Instagram",
     icon: (
       <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "https://www.instagram.com/kavan.a1/",
   },
 ];
 
