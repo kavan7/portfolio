@@ -35,7 +35,7 @@ const FloatingDockMobile = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <div className={cn("relative block md:hidden fixed top-0 inset-x-0", className)}>
       <AnimatePresence>

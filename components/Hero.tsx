@@ -6,6 +6,8 @@ import { AuroraBackground } from "./ui/aurora-background";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
   IconBrandX,
   IconExchange,
   IconHome,
@@ -18,55 +20,16 @@ import Image from "next/image";
 import { FocusCards } from "./ui/focus-cards";
 import Link from "next/link";
 const links = [
-  {
-    title: "Home",
-    icon: (
-      <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
+ 
 
   {
-    title: "Products",
+    title: "Projects",
     icon: (
       <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#",
   },
-  {
-    title: "Components",
-    icon: (
-      <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-  {
-    title: "Aceternity UI",
-    icon: (
-      <Image
-        src="https://assets.aceternity.com/logo-dark.png"
-        width={20}
-        height={20}
-        alt="Aceternity Logo"
-      />
-    ),
-    href: "#",
-  },
-  {
-    title: "Changelog",
-    icon: (
-      <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
-
-  {
-    title: "Twitter",
-    icon: (
-      <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
+  
   {
     title: "GitHub",
     icon: (
@@ -74,7 +37,22 @@ const links = [
     ),
     href: "#",
   },
+  {
+    title: "LinkedIn",
+    icon: (
+      <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
+  {
+    title: "Instagram",
+    icon: (
+      <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#",
+  },
 ];
+
 
 const cards = [
  
@@ -115,11 +93,11 @@ export function AuroraBackgroundDemo() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <div className="text-5xl md:text-7xl font-bold text-white text-center">
+        <div className="text-5xl md:text-8xl md:mt-[150px] mt-[10px] font-bold text-white text-center">
           Hi, I'm <span className="text-[#315930] ">Kavan.</span>
         </div>
         <div className="font-extralight text-3xl text-neutral-200 py-4">
-          And this, is my story.
+          And this, is my portfolio.
         </div>
         <div className="bottom xs:bottom-2 xs:top-39  w-full flex justify-center ">
   <motion.div
@@ -135,12 +113,9 @@ export function AuroraBackgroundDemo() {
     className="mt-[150px]"
   >
     <Link
-      href="/"
+      href="#education"
       className="flex items-center gap-2"
-      onClick={() => {
-        setActive("");
-        window.scrollTo(0, 800);
-      }}
+  
     >
       {/* Remove the hidden class */}
       <svg
@@ -161,12 +136,9 @@ export function AuroraBackgroundDemo() {
       </svg>
     </Link>
     <Link
-      href="/"
+      href="#education"
       className="flex items-center gap-2"
-      onClick={() => {
-        setActive("");
-        window.scrollTo(0, 800);
-      }}
+   scroll
     >
       <svg
         data-accordion-icon
@@ -190,6 +162,8 @@ export function AuroraBackgroundDemo() {
 
 
       </motion.div>
+    
     </AuroraBackground>
+    
   );
 }
