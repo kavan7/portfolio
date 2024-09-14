@@ -6,10 +6,19 @@ import {
   IconArrowWaveRightUp,
   IconBoxAlignRightFilled,
   IconBoxAlignTopLeft,
+  IconBrain,
   IconClipboardCopy,
+  IconClockCancel,
   IconFileBroken,
+  IconFileSmile,
+  IconGuitarPick,
+  IconMoodSmile,
+  IconMusic,
+  IconPlane,
   IconSignature,
   IconTableColumn,
+  IconTimeDuration90,
+  IconWorld,
 } from "@tabler/icons-react";
 const Personal = () => {
   return (
@@ -17,7 +26,7 @@ const Personal = () => {
     <hr className='mt-[100px] mb-[100px]'/> 
     My <span className="text-[#315930] ">Life</span>
     </h1>
-    <BentoGrid className="max-w-4xl mx-auto">
+    <BentoGrid className="max-w-4xl mx-auto mb-[100px]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -28,7 +37,11 @@ const Personal = () => {
           className={i === 3 || i === 6 ? "md:col-span-2" : ""}
         />
       ))}
+       
     </BentoGrid>
+    <button className="bg-white">
+      Connect with me!
+    </button>
    </div>
   )
 }
@@ -37,48 +50,37 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "The Birth of a Guitarist",
+    description: "How Childhood Choices Ignite Lifelong Passions",
     header: <Skeleton />,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconMusic className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Exploring Diverse Religions in a Connected World",
+    description: "Opportunities to learn about and appreciate diverse religious beliefs.",
     header: <Skeleton />,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconBrain className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "My Dream Vacation",
+    description: "Discovering the beauty of the world.",
     header: <Skeleton />,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconPlane className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
+    title: "The Power of a Smile",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "My favorite lesson from 'How to Win Friends and Influence People'.",
     header: <Skeleton />,
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconMoodSmile className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
+    description: "My thoughts on 'What I Have Lived For'",
     header: <Skeleton />,
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    icon: <IconClockCancel className="h-4 w-4 text-neutral-500" />,
   },
-  {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: <Skeleton />,
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
-  },
+
 ];
 
 export default Personal

@@ -3,7 +3,9 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
- 
+import Link from "next/link";
+//@ts-ignore
+import { LoopPingPong } from "three";
 export function Education() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
@@ -34,7 +36,7 @@ export function Education() {
     <>
      <div id="education"/>
       <AnimatePresence >
-      <h1 className=" uppercase text-wider text-5xl   font-black mb-[50px] text-center " id="">          
+      <h1 className=" uppercase text-wider text-5xl   font-black mb-[100px] mt-[250px] text-center " id="">          
         My <span className="text-[#315930]">Learning</span>
         </h1>
         {active && typeof active === "object" && (
@@ -171,6 +173,66 @@ export function Education() {
           </motion.div>
         ))}
       </ul>
+      <div className="flex flex-col items-center">
+      <motion.div
+    animate={{
+      y: [-40, -90, -40],
+    }}
+    transition={{
+      duration: 1.5,
+      repeat: Infinity,
+      //@ts-ignore
+      repeatType: LoopPingPong,
+    }}
+    className="mt-[150px] "
+  >
+    <Link
+      href="#projects"
+      className="flex items-center gap-2"
+  
+    >
+      {/* Remove the hidden class */}
+      <svg
+        data-accordion-icon
+        className="sm:block w-16 rotate-180 shrink-0"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="white"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </Link>
+    <Link
+      href="#projects"
+      className="flex items-center gap-2"
+   scroll
+    >
+      <svg
+        data-accordion-icon
+        className=" w-16 rotate-180 shrink-53"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="white"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </Link>
+  </motion.div>
+  </div>
     </>
   );
 }

@@ -27,8 +27,8 @@ export const AuroraBackground = ({
             className={cn(
               `
             [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
-            [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
-            [--aurora:repeating-linear-gradient(100deg,#040a04_0%,#0a1c0a_20%,#1a3a1a_40%,#2b5b2b_60%,#040a04_80%)]
+            [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_6%)]
+            [--aurora:repeating-linear-gradient(100deg,#fff_0%,#ffffff_20%,#1a3a1a_40%,#2b5b2b_800%,#040a04_100%)]
             [background-image:var(--white-gradient),var(--aurora)]
             dark:[background-image:var(--dark-gradient),var(--aurora)]
             [background-size:300%,_200%]
