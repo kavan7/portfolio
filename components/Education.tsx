@@ -231,7 +231,7 @@ const cards = [
     description: "HarvardX",
     title: "CS50L",
     src: "https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/CS50L_pll.png?itok=ap9xcCNT",
-    ctaText: "Play",
+    ctaText: "Visit",
     ctaLink: "https://vrealauth.com",
     content: () => {
       return (
@@ -242,6 +242,20 @@ const cards = [
     on cryptography, where I gained a deep understanding of how encryption and digital security play a critical 
     role in protecting data and ensuring privacy—an essential aspect in both law and technology today. This 
     course has equipped me with valuable insights into how tech and legal frameworks intersect.
+  </p>
+      );
+    },
+  },
+  {
+    description: "OTU '24",
+    title: "Shad Canada",
+    src: "https://www.shad.ca/wp-content/uploads/2023/08/Logo-footer.png",
+    ctaText: "Visit",
+    ctaLink: "https://www.shad.ca/",
+    content: () => {
+      return (
+        <p>
+ Shad Canada is a prestigious enrichment program that brings together high-achieving high school students from across the country for a month-long immersive experience. Focused on STEAM (Science, Technology, Engineering, Arts, and Mathematics), entrepreneurship, and leadership, Shad provides students with hands-on workshops, inspiring lectures, and the opportunity to collaborate on innovative projects. It’s a life-changing program designed to foster creativity, critical thinking, and leadership skills.
   </p>
       );
     },
