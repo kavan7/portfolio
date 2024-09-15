@@ -139,14 +139,14 @@ export function Education() {
             onClick={() => setActive(card)}
             className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col md:flex-row ">
+            <div className="flex gap-4 flex-col md:flex-row items-center rounded-2xl">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
+                  className="h-40 w-40 md:h-14 md:w-14 rounded-2xl object-cover object-top"
                 />
               </motion.div>
               <div className="">
@@ -275,7 +275,7 @@ const cards = [
   {
     description: "AP Student",
     title: "Martingrove Collegiate Institute",
-    src: "https://upload.wikimedia.org/wikipedia/commons/6/60/MCILogo.jpg",
+    src: "/MCILogo.jpg",
     ctaText: "Visit",
     ctaLink: "https://sites.google.com/tdsb.on.ca/martingroveci/mci-home",
     content: () => {

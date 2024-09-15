@@ -68,9 +68,9 @@ const Extracurriculars = () => {
  
     <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl text-white  font-black mb-[50px] text-center ">         
     <hr className='mt-[100px] mb-[100px]'/> 
-    My <span className="text-[#315930] ">Extracurriculars</span>
+    My <span className="text-[#315930] text-4xl ">Extracurriculars</span>
     </h1>
-    <div className="mt-[30px]">
+    <div className="mt-[30px] items-center">
     <StickyScroll content={content} />
     </div>
     </div>

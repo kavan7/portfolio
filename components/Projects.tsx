@@ -15,8 +15,9 @@ export function AppleCardsCarouselDemo() {
     <hr className='mt-[100px] mb-[100px]'/> 
     My <span className="text-[#315930] " id="projects">Projects</span>
     </h1>
-
+<div className="">
       <Carousel items={cards} />
+      </div>
     </div>
   );
 }
