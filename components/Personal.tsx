@@ -20,28 +20,31 @@ import {
   IconTimeDuration90,
   IconWorld,
 } from "@tabler/icons-react";
+import Image from "next/image";
 const Personal = () => {
   return (
-    <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl   font-black mb-[50px] text-center ">         
+    <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl   font-black mb-3 text-center ">         
     <hr className='mt-[100px] mb-[100px]'/> 
     My <span className="text-[#315930] ">Life</span>
     </h1>
-    <BentoGrid className="max-w-4xl mx-auto mb-[100px]">
+    <h1 className=" uppercase text-wider text-2xl tracking-widest  font-light mb-[50px] text-center ">         
+   
+    <span className="text-[#6e796e] ">COMING SOON</span>
+    </h1>
+    <BentoGrid className="max-w-5xl mx-auto mb-[100px]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
           title={item.title}
           description={item.description}
           header={item.header}
-          icon={item.icon}
+        
           className={i === 3 || i === 6 ? "md:col-span-2" : ""}
         />
       ))}
        
     </BentoGrid>
-    <button className="bg-white">
-      Connect with me!
-    </button>
+ 
    </div>
   )
 }
@@ -52,7 +55,7 @@ const items = [
   {
     title: "The Birth of a Guitarist",
     description: "How Childhood Choices Ignite Lifelong Passions",
-    header: <Skeleton />,
+    header: <Image src={`/guitar.jpg`} alt="guitar" width={300} height={100} className=" flex h-[190px] rounded-2xl border border-neutral-800" />,
     icon: <IconMusic className="h-4 w-4 text-neutral-500" />,
   },
   {
@@ -76,7 +79,7 @@ const items = [
   },
   {
     title: "The Pursuit of Knowledge",
-    description: "My thoughts on 'What I Have Lived For'",
+    description: "'What I Have Lived For'",
     header: <Skeleton />,
     icon: <IconClockCancel className="h-4 w-4 text-neutral-500" />,
   },
