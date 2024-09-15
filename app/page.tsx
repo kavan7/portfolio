@@ -11,7 +11,7 @@ import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="bg-black">
 
      <AuroraBackgroundDemo/>
 

@@ -34,9 +34,9 @@ export function Education() {
  
   return (
     <>
-     <div id="education"/>
+     <div id="education" className="bg-black">
       <AnimatePresence >
-      <h1 className=" uppercase text-wider text-5xl   font-black mb-[100px] mt-[250px] text-center " id="">          
+      <h1 className=" uppercase text-wider text-5xl text-white  font-black mb-[100px] mt-[250px] text-center " id="">          
         My <span className="text-[#315930]">Learning</span>
         </h1>
         {active && typeof active === "object" && (
@@ -232,6 +232,7 @@ export function Education() {
       </svg>
     </Link>
   </motion.div>
+  </div>
   </div>
     </>
   );

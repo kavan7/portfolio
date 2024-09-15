@@ -23,7 +23,7 @@ import {
 import Image from "next/image";
 const Personal = () => {
   return (
-    <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl   font-black mb-3 text-center ">         
+    <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl text-white  font-black mb-3 text-center ">         
     <hr className='mt-[100px] mb-[100px]'/> 
     My <span className="text-[#315930] ">Life</span>
     </h1>

@@ -132,7 +132,7 @@ const data = [
 
 const Experience = () => {
   return (
-    <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl   font-black mb-[50px] text-center ">         
+    <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl text-white  font-black mb-[50px] text-center ">         
     <hr className='mt-[100px] mb-[100px]'/> 
     My <span className="text-[#315930] ">Experience</span>
     </h1>
