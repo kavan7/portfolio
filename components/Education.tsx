@@ -113,13 +113,13 @@ export function Education() {
                     {active.ctaText}
                   </motion.a>
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="pt-4 relative px-4 ">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-800 text-xs md:text-sm  px-4 lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-hidden dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] overflow-y-scroll "
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -158,7 +158,7 @@ export function Education() {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-600 dark:text-neutral-400 text-center overflow-y-scroll md:text-left"
                 >
                   {card.description}
                 </motion.p>
@@ -286,6 +286,13 @@ const cards = [
         As the Web Head of the school newspaper, I manage its online presence, and I also lead as the Captain 
         of the Ultimate Frisbee team while playing in the concert band. As an AP student, I thrive in an 
         accelerated learning environment that challenges me to grow both academically and in my extracurricular pursuits.
+     
+        At <strong>Martingrove Collegiate Institute</strong>, I’m the President of the Student Council, 
+        Co-President and founder of our DECA chapter, and serve as the Audio Technician for TEDx events. 
+        As the Web Head of the school newspaper, I manage its online presence, and I also lead as the Captain 
+        of the Ultimate Frisbee team while playing in the concert band. As an AP student, I thrive in an 
+        accelerated learning environment that challenges me to grow both academically and in my extracurricular pursuits.
+     
       </p>
       );
     },
