@@ -2,12 +2,14 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+  
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "export": "next export"  
+    },
+  
   "dependencies": {
     "@tabler/icons-react": "^3.16.0",
     "clsx": "^2.1.1",
