@@ -5,15 +5,16 @@ on:
     branches:
       - main
 
+env:
+  VERSION: ${{ github.run_number }} # Fallback to a unique identifier if not set
+
 jobs:
   build:
-    runs-on: gha-runner-scale-set-linux
+    runs-on: ubuntu-latest  # Replaced to ensure availability; use gha-runner-scale-set-linux if required
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Insert your build steps here, such as installing dependencies, running build scripts, etc.
-      # Example:
       - name: Install dependencies
         run: npm install
 
@@ -29,7 +30,7 @@ jobs:
           retention-days: 5
 
   publish-docker-image:
-    runs-on: gha-runner-scale-set-linux
+    runs-on: ubuntu-latest  # Replaced for consistency
     needs: build
     steps:
       - name: Download Artifact
@@ -47,7 +48,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: DIS_${{ env.VERSION }}
           path: ./dist
