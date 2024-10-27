@@ -5,12 +5,11 @@ on:
     branches:
       - main
 
-env:
-  VERSION: ${{ github.run_number }} # Fallback to a unique identifier if not set
-
 jobs:
   build:
-    runs-on: ubuntu-latest  # Replaced to ensure availability; use gha-runner-scale-set-linux if required
+    runs-on: ubuntu-latest
+    outputs:
+      artifact_name: DIS_${{ github.run_number }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -25,18 +24,18 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
-          name: DIS_${{ env.VERSION }}
+          name: DIS_${{ github.run_number }}  # Consistent artifact name
           path: ./publish
           retention-days: 5
 
   publish-docker-image:
-    runs-on: ubuntu-latest  # Replaced for consistency
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
-          name: DIS_${{ env.VERSION }}
+          name: DIS_${{ needs.build.outputs.artifact_name }}
 
       - name: List Artifact Contents
         run: ls -R ./publish
@@ -50,7 +49,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: DIS_${{ env.VERSION }}
+          name: DIS_${{ needs.build.outputs.artifact_name }}
           path: ./dist
 
       - name: Deploy to GitHub Pages
