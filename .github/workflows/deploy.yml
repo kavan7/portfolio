@@ -21,10 +21,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
-
-      - name: Export project to static HTML
-        run: npm run export
+        run: npm run build  # This will automatically export static files to ./out
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
