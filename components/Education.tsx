@@ -302,7 +302,7 @@ const cards = [
   {
     description: "HarvardX",
     title: "CS50L",
-    src: "https://kavanaabeyratne.com/cs50l.png",
+    src: "https://kavanabeyratne.com/cs50l.png",
     ctaText: "Visit",
     ctaLink: "https://vrealauth.com",
     content: () => {

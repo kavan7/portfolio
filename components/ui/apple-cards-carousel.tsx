@@ -278,6 +278,7 @@ export const BlurImage = ({
   const [isLoading, setLoading] = useState(true);
   return (
     <Image
+    unoptimized
       className={cn(
         "transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
