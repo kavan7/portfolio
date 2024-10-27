@@ -275,7 +275,7 @@ const cards = [
   {
     description: "AP Student",
     title: "Martingrove Collegiate Institute",
-    src: "/MCILogo.jpg",
+    src: "https://kavanabeyratne.com/MCILogo.jpg",
     ctaText: "Visit",
     ctaLink: "https://sites.google.com/tdsb.on.ca/martingroveci/mci-home",
     content: () => {
@@ -300,7 +300,7 @@ const cards = [
   {
     description: "HarvardX",
     title: "CS50L",
-    src: "https://pll.harvard.edu/sites/default/files/styles/16_9_medium/public/course/CS50L_pll.png?itok=ap9xcCNT",
+    src: "https://kavanaabeyratne.com/cs50l.png",
     ctaText: "Visit",
     ctaLink: "https://vrealauth.com",
     content: () => {
@@ -319,7 +319,7 @@ const cards = [
   {
     description: "OTU '24",
     title: "Shad Canada",
-    src: "https://www.shad.ca/wp-content/uploads/2023/08/Logo-footer.png",
+    src: "https://kavanabeyratne.com/shad.png",
     ctaText: "Visit",
     ctaLink: "https://www.shad.ca/",
     content: () => {

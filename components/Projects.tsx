@@ -44,7 +44,7 @@ You can sign a file, and distribute to anybody, where users can verify that the 
 Vreal also has the potential to eliminate any false media you will see. With the uprising use of AI , Vreal can prevent the malicious exploitations of the technology.
             </p>
             <Image
-              src="/vrealauth.png"
+              src="https://kavanabeyratne.com/vrealauth.png"
               alt="Macbook mockup from Aceternity UI"
               height="1000"
               width="1000"
@@ -73,7 +73,7 @@ const DummyContentRaj = () => {
               <br/><br/>
               During my internship at Raj Gill Law, I gained invaluable experience in the legal field, learning a wide array of professional skills. Recognizing the firm's need for a modern digital presence, I leveraged my software development expertise to pitch and create a custom website. The firm was impressed with the final product and ultimately decided to purchase it, allowing me to directly contribute to their operations while combining my passion for technology with legal work. This experience ultimately led to a remote permanent role at the firm.   </p>
             <Image
-              src="/rajgilllaw.png"
+              src="https://kavanabeyratne.com/rajgilllaw.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -107,7 +107,7 @@ Codeling's mission is to inspire and educate children through free, interactive,
 Codeling consists of a dedicated team of students who are technologists and enthusiasts passionate about teaching kids the wonders of coding. We understand that the digital world is rapidly evolving, and we aim to equip children with the tools they need to thrive in this dynamic environment.
 
 The program is a year-round virtual class which takes place every weekend. Students will join and learn a new concept each week. They will also be able to apply their knowledge with an end-of-year project!</p>     <Image
-              src="/codelingacademy.png"
+              src="https://kavanabeyratne.com/codelingacademy.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -136,7 +136,7 @@ const DummyContentBraindle = () => {
               </span>{" "}
               <br/><br/>
           </p>     <Image
-              src="/braindleread.png"
+              src="https://kavanabeyratne.com/braindleread.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -165,7 +165,7 @@ const DummyContentBeacon = () => {
               </span>{" "}
               <br/><br/>
           </p>     <Image
-              src="/thebeacon.png"
+              src="https://kavanabeyratne.com/thebeacon.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -179,69 +179,36 @@ const DummyContentBeacon = () => {
 };
 
 
-const DummyContent = () => {
-  return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-                
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <Image
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
-
 const data = [
   {
     category: "Verify your media.",
     title: "Vreal ",
-    src: "/vreal.png",
+    src: "https://kavanabeyratne.com/vreal.png",
     content: <DummyContentVreal />,
   },
   {
     category: "Raj Gill Law ",
     title: "Raj Gill Law",
-    src: "/rajgill.png",
+    src: "https://kavanabeyratne.com/rajgill.png",
     content: <DummyContentRaj />,
   },
   {
     category: "Product",
     title: "Codeling",
-    src: "/codeling.png",
+    src: "https://kavanabeyratne.com/codeling.png",
     content: <DummyContentCodeling />,
   },
 
   {
     category: "Product",
     title: "Braindle",
-    src: "/braindle.png",
+    src: "https://kavanabeyratne.com/braindle.png",
     content: <DummyContentBraindle />,
   },
   {
     category: "iOS",
     title: "The Beacon - School Newspaper",
-    src: "/beacon.png",
+    src: "https://kavanabeyratne.com/beacon.png",
         content: <DummyContentBeacon />,
   },
  
