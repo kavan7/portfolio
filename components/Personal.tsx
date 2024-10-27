@@ -55,7 +55,7 @@ const items = [
   {
     title: "The Birth of a Guitarist",
     description: "How Childhood Choices Ignite Lifelong Passions",
-    header: <Image src={`https://kavanabeyratne.com/guitar.jpg`} alt="guitar" width={300} height={100} className=" flex h-[190px] rounded-2xl border border-neutral-800" />,
+    header: <Image unoptimized src={`https://kavanabeyratne.com/guitar.jpg`} alt="guitar" width={300} height={100} className=" flex h-[190px] rounded-2xl border border-neutral-800" />,
     icon: <IconMusic className="h-4 w-4 text-neutral-500" />,
   },
   {

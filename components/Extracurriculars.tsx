@@ -10,7 +10,7 @@ const content = [
       ,
     content: (
       <div className="h-full w-full rounded-2xl  flex items-center justify-center text-white">
-        <Image src={`https://kavanabeyratne.com/sacprez.png`} alt="sac" width={500} height={500}/>
+        <Image unoptimized src={`https://kavanabeyratne.com/sacprez.png`} alt="sac" width={500} height={500}/>
       </div>
     ),
   },
@@ -21,6 +21,7 @@ const content = [
     content: (
       <div className="h-full rounded-2xl w-full  flex items-center justify-center text-white">
         <Image
+        unoptimized
           src="https://kavanabeyratne.com/ultimate.png"
           width={300}
           height={300}
@@ -37,6 +38,7 @@ const content = [
     content: (
       <div className="h-full rounded-2xl w-full  flex items-center justify-center text-white">
       <Image
+      unoptimized
         src="https://kavanabeyratne.com/deca.png"
         width={300}
         height={300}
@@ -53,6 +55,7 @@ const content = [
     content: (
       <div className="h-full rounded-2xl w-full  flex items-center justify-center text-white">
       <Image
+      unoptimized
         src="https://kavanabeyratne.com/band.png"
         width={300}
         height={300}

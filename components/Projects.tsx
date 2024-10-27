@@ -44,6 +44,7 @@ You can sign a file, and distribute to anybody, where users can verify that the 
 Vreal also has the potential to eliminate any false media you will see. With the uprising use of AI , Vreal can prevent the malicious exploitations of the technology.
             </p>
             <Image
+            unoptimized
               src="https://kavanabeyratne.com/vrealauth.png"
               alt="Macbook mockup from Aceternity UI"
               height="1000"
@@ -73,6 +74,7 @@ const DummyContentRaj = () => {
               <br/><br/>
               During my internship at Raj Gill Law, I gained invaluable experience in the legal field, learning a wide array of professional skills. Recognizing the firm's need for a modern digital presence, I leveraged my software development expertise to pitch and create a custom website. The firm was impressed with the final product and ultimately decided to purchase it, allowing me to directly contribute to their operations while combining my passion for technology with legal work. This experience ultimately led to a remote permanent role at the firm.   </p>
             <Image
+            unoptimized
               src="https://kavanabeyratne.com/rajgilllaw.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
@@ -107,6 +109,7 @@ Codeling's mission is to inspire and educate children through free, interactive,
 Codeling consists of a dedicated team of students who are technologists and enthusiasts passionate about teaching kids the wonders of coding. We understand that the digital world is rapidly evolving, and we aim to equip children with the tools they need to thrive in this dynamic environment.
 
 The program is a year-round virtual class which takes place every weekend. Students will join and learn a new concept each week. They will also be able to apply their knowledge with an end-of-year project!</p>     <Image
+            unoptimized
               src="https://kavanabeyratne.com/codelingacademy.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
@@ -136,6 +139,7 @@ const DummyContentBraindle = () => {
               </span>{" "}
               <br/><br/>
           </p>     <Image
+          unoptimized
               src="https://kavanabeyratne.com/braindleread.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
@@ -165,6 +169,7 @@ const DummyContentBeacon = () => {
               </span>{" "}
               <br/><br/>
           </p>     <Image
+          unoptimized
               src="https://kavanabeyratne.com/thebeacon.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
