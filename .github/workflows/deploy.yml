@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      artifact_name: DIS_${{ github.run_number }}
+      artifact_name: ${{ github.run_number }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
-          name: DIS_${{ github.run_number }}  # Consistent artifact name
+          name: DIS_${{ github.run_number }}  # Simplified to avoid prefix duplication
           path: ./publish
           retention-days: 5
 
