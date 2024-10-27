@@ -7,27 +7,28 @@ on:
 
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-latest
-
+    runs-on: gha-runner-scale-set-linux
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build project
-        run: npm run build
-
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
+      [ ... ]
+      - name: "Upload Artifact"
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
         with:
-          name: production-files
-          path: ./dist
+          name: DIS_${{ env.VERSION }}
+          path: ./publish
+          retention-days: 5
+  
+  publish-docker-image:
+    runs-on: gha-runner-scale-set-linux
+    needs: build
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4 # UPDATE HERE
+        with:
+          name: DIS_${{ env.VERSION }}
+      - name: List Artifact Contents
+        run: ls -R
+
 
   deploy:
     name: Deploy
