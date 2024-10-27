@@ -8,11 +8,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      artifact_name: DIS_${{ github.run_number }}  # Define the artifact name here
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Ensure compatibility with your Next.js version
 
       - name: Install dependencies
         run: npm install
@@ -20,34 +23,27 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Log artifact name
-        run: echo "Artifact name is DIS_${{ github.run_number }}"
+      - name: Export project to static HTML
+        run: npm run export
 
       - name: Upload Artifact
-        if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
-          name: DIS_${{ github.run_number }}
-          path: ./publish
-          retention-days: 5
+          name: nextjs-site
+          path: ./out  # Default export folder for static sites in Next.js
 
   deploy:
-    name: Deploy
-    needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    needs: build
     steps:
-      - name: Log artifact name
-        run: echo "Using artifact name: DIS_${{ needs.build.outputs.artifact_name }}"
-
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: DIS_${{ needs.build.outputs.artifact_name }}
-          path: ./dist
+          name: nextjs-site
+          path: ./out
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./out  # Matches the download path above
