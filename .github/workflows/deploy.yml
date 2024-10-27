@@ -9,38 +9,47 @@ jobs:
   build:
     runs-on: gha-runner-scale-set-linux
     steps:
-      [ ... ]
-      - name: "Upload Artifact"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Insert your build steps here, such as installing dependencies, running build scripts, etc.
+      # Example:
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload Artifact
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: DIS_${{ env.VERSION }}
           path: ./publish
           retention-days: 5
-  
+
   publish-docker-image:
     runs-on: gha-runner-scale-set-linux
     needs: build
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v4 # UPDATE HERE
+        uses: actions/download-artifact@v4
         with:
           name: DIS_${{ env.VERSION }}
-      - name: List Artifact Contents
-        run: ls -R
 
+      - name: List Artifact Contents
+        run: ls -R ./publish
 
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: production-files
+          name: DIS_${{ env.VERSION }}
           path: ./dist
 
       - name: Deploy to GitHub Pages
