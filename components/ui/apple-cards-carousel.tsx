@@ -257,6 +257,7 @@ export const Card = ({
           </motion.p>
         </div>
         <BlurImage
+        unoptimized
           src={card.src}
           alt={card.title}
           fill
