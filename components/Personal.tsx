@@ -21,6 +21,8 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import { link } from "fs";
+import Link from "next/link";
 const Personal = () => {
   return (
     <div className='mt-[100px]'><h1 className=" uppercase text-wider text-5xl text-white  font-black mb-3 text-center ">         
@@ -33,7 +35,10 @@ const Personal = () => {
     </h1>
     <BentoGrid className="max-w-5xl mx-auto mb-[100px]">
       {items.map((item, i) => (
+          <Link href={`/${item.link}`}>
+      
         <BentoGridItem
+         
           key={i}
           title={item.title}
           description={item.description}
@@ -41,9 +46,10 @@ const Personal = () => {
         
           className={i === 3 || i === 6 ? "md:col-span-2" : ""}
         />
-      ))}
-       
+     </Link>  ))}
+     
     </BentoGrid>
+   
  
    </div>
   )
@@ -53,6 +59,7 @@ const Skeleton = () => (
 );
 const items = [
   {
+    link: "guitar",
     title: "The Birth of a Guitarist",
     description: "How Childhood Choices Ignite Lifelong Passions",
     header: <Image unoptimized src={`https://kavanabeyratne.com/guitar.jpg`} alt="guitar" width={300} height={100} className=" flex h-[190px] rounded-2xl border border-neutral-800" />,
