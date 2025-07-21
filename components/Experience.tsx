@@ -10,7 +10,7 @@ const data = [
       <div>
         <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
         
-        Completed a four-week internship at a law office, where I designed and built a website that led to a permanent position, alongside gaining hands-on experience in family law, court proceedings, and Pro Bono legal research.
+        Completed a four-week internship at a law office, where I designed and built a website that led to a permanent position, alongside gaining hands-on experience in family law, court proceedings, and Pro Bono legal research. Currently working a paid part-time web-developer and online marketing lead, running Google Ads and conducting SEO strategies. 
         </p>
         <div className="grid grid-cols-2 gap-4">
           <Image

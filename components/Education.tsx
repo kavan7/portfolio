@@ -74,7 +74,7 @@ export function Education() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-y-scroll"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -272,30 +272,41 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
- 
-const cards = [
+ const cards = [
   {
-    description: "AP Student",
+    description: "Business Administration & Computer Science",
+    title: "Wilfred Laurier University",
+    src: "https://media.licdn.com/dms/image/v2/D560BAQFN_M3sxMrMFQ/company-logo_200_200/company-logo_200_200/0/1666188296925/wilfrid_laurier_university_logo?e=1755734400&v=beta&t=7Z1ivDOs4uLa0thC34Vlk0dOed3EDcfO_-qZ_G48Bi8",
+    ctaText: "Visit",
+    ctaLink: "https://www.wlu.ca/academics/faculties/lazaridis-school-of-business-and-economics/index.html",
+    content: () => null,
+  },
+  {
+    description: "OSSD",
     title: "Martingrove Collegiate Institute",
     src: "https://kavanabeyratne.com/MCILogo.jpg",
     ctaText: "Visit",
     ctaLink: "https://sites.google.com/tdsb.on.ca/martingroveci/mci-home",
     content: () => {
       return (
-        <p>
-        At <strong>Martingrove Collegiate Institute</strong>, I’m the President of the Student Council, 
-        Co-President and founder of our DECA chapter, and serve as the Audio Technician for TEDx events. 
-        As the Web Head of the school newspaper, I manage its online presence, and I also lead as the Captain 
-        of the Ultimate Frisbee team while playing in the concert band. As an AP student, I thrive in an 
-        accelerated learning environment that challenges me to grow both academically and in my extracurricular pursuits.
-     
-        At <strong>Martingrove Collegiate Institute</strong>, I’m the President of the Student Council, 
-        Co-President and founder of our DECA chapter, and serve as the Audio Technician for TEDx events. 
-        As the Web Head of the school newspaper, I manage its online presence, and I also lead as the Captain 
-        of the Ultimate Frisbee team while playing in the concert band. As an AP student, I thrive in an 
-        accelerated learning environment that challenges me to grow both academically and in my extracurricular pursuits.
-     
-      </p>
+        <div>
+          <p>
+            <strong>Martingrove Collegiate Institute</strong> — Toronto, ON  
+            <br />
+            <em>Student Leader | Valedictorian | AP Scholar</em>
+          </p>
+          <ul style={{ paddingLeft: "1.2rem", marginTop: "0.5rem" }}>
+            <li><strong>Student Council President</strong> – Led student government and organized school-wide initiatives.</li>
+            <li><strong>Valedictorian</strong> – Delivered <a href="https://www.youtube.com/live/WS1tjSfj1JE?si=DaoGphPUu-0NXgob&t=8270" target="_blank" rel="noopener noreferrer">graduation speech</a> for the Class of 2025.</li>
+            <li><strong>AP Scholar</strong> – Recognized for high performance in Advanced Placement coursework.</li>
+            <li><strong>Founder & Co-President, DECA Chapter</strong> – Established and led the school's first DECA program.</li>
+            <li><strong>Audio Technician, TEDxMartingrove</strong> – Managed technical audio for independently organized TEDx events.</li>
+            <li><strong>Web Head, School Newspaper</strong> – Oversaw digital content and publishing operations.</li>
+            <li><strong>Captain, Ultimate Frisbee Team</strong> – Led team development and tournament strategy.</li>
+            <li><strong>Concert Band Musician</strong> – Regular performer at school and community events.</li>
+            <li><strong>Disability Advocacy & Inclusion Committee</strong> – Received Honorable Mention for advancing accessibility and equity.</li>
+          </ul>
+        </div>
       );
     },
   },
@@ -304,17 +315,17 @@ const cards = [
     title: "CS50L",
     src: "https://kavanabeyratne.com/cs50l.png",
     ctaText: "Visit",
-    ctaLink: "https://vrealauth.com",
+    ctaLink: "https://courses.edx.org/certificates/439f9ff49d2e4d6eab0330cb06a441af",
     content: () => {
       return (
         <p>
-    <strong>CS50L: Introduction to Computer Science for Lawyers</strong> is a specialized course offered by 
-    Harvard University, tailored to bridge the gap between law and technology. The course covers key computer 
-    science concepts without requiring prior technical knowledge. One lecture that truly stood out for me was 
-    on cryptography, where I gained a deep understanding of how encryption and digital security play a critical 
-    role in protecting data and ensuring privacy—an essential aspect in both law and technology today. This 
-    course has equipped me with valuable insights into how tech and legal frameworks intersect.
-  </p>
+          <strong>CS50L: Introduction to Computer Science for Lawyers</strong> is a specialized course offered by 
+          Harvard University, tailored to bridge the gap between law and technology. The course covers key computer 
+          science concepts without requiring prior technical knowledge. One lecture that truly stood out for me was 
+          on cryptography, where I gained a deep understanding of how encryption and digital security play a critical 
+          role in protecting data and ensuring privacy—an essential aspect in both law and technology today. This 
+          course has equipped me with valuable insights into how tech and legal frameworks intersect.
+        </p>
       );
     },
   },
@@ -327,10 +338,13 @@ const cards = [
     content: () => {
       return (
         <p>
- Shad Canada is a prestigious enrichment program that brings together high-achieving high school students from across the country for a month-long immersive experience. Focused on STEAM (Science, Technology, Engineering, Arts, and Mathematics), entrepreneurship, and leadership, Shad provides students with hands-on workshops, inspiring lectures, and the opportunity to collaborate on innovative projects. It’s a life-changing program designed to foster creativity, critical thinking, and leadership skills.
-  </p>
+          Shad Canada is a prestigious enrichment program that brings together high-achieving high school students 
+          from across the country for a month-long immersive experience. Focused on STEAM (Science, Technology, 
+          Engineering, Arts, and Mathematics), entrepreneurship, and leadership, Shad provides students with hands-on 
+          workshops, inspiring lectures, and the opportunity to collaborate on innovative projects. It’s a life-changing 
+          program designed to foster creativity, critical thinking, and leadership skills.
+        </p>
       );
     },
   },
- 
 ];
