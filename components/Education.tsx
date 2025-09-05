@@ -276,7 +276,7 @@ export const CloseIcon = () => {
   {
     description: "Business Administration & Computer Science",
     title: "Wilfred Laurier University",
-    src: "https://media.licdn.com/dms/image/v2/D560BAQFN_M3sxMrMFQ/company-logo_200_200/company-logo_200_200/0/1666188296925/wilfrid_laurier_university_logo?e=1755734400&v=beta&t=7Z1ivDOs4uLa0thC34Vlk0dOed3EDcfO_-qZ_G48Bi8",
+    src: "https://www.wlu.ca/images/general/laurier-crest-rev.jpg",
     ctaText: "Visit",
     ctaLink: "https://www.wlu.ca/academics/faculties/lazaridis-school-of-business-and-economics/index.html",
     content: () => null,
